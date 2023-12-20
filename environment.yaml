@@ -1,0 +1,24 @@
+name: phase-aware-rt-calibration
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - ipykernel
+  - nbformat
+  - numpy
+  - matplotlib
+  - pillow
+  - click
+  - pandas
+  - seaborn
+  - scipy
+  - plotly
+  - pip
+  - pip:
+    - sionna==0.16.1
+    - tensorflow==2.11.*  # Note: anything above 2.10 is not supported on the GPU on Windows Native
+    - tensorflow-probability==0.19.*
+    - bezier
+    - python-dotenv
+    - -e \.

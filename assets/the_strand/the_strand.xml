@@ -1,0 +1,2438 @@
+<scene version="2.1.0">
+
+<!-- Defaults, these can be set via the command line: -Darg=value -->
+
+
+<!-- Camera and Rendering Parameters -->
+
+	<integrator type="path">
+		<integer name="max_depth" value="12"/>
+	</integrator>
+
+<!-- Materials -->
+
+	<bsdf type="twosided" id="mat-building_mat">
+		<bsdf type="diffuse">
+			<rgb value="0.799102 0.658374 0.456411" name="reflectance"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="mat-the_strand_map_texture">
+		<bsdf type="principled">
+			<texture type="bitmap" name="base_color">
+				<string name="filename" value="textures/the_strand_map_raster.png"/>
+			</texture>
+			<float name="spec_tint" value="0.000000"/>
+			<float name="spec_trans" value="0.000000"/>
+			<float name="metallic" value="0.000000"/>
+			<float name="anisotropic" value="0.000000"/>
+			<float name="roughness" value="0.000000"/>
+			<float name="sheen" value="0.000000"/>
+			<float name="sheen_tint" value="0.000000"/>
+			<float name="clearcoat" value="0.000000"/>
+			<float name="clearcoat_gloss" value="0.000000"/>
+			<float name="specular" value="0.001000"/>
+		</bsdf>
+	</bsdf>
+
+<!-- Emitters -->
+
+	<emitter type="directional" id="emit-Sun">
+		<rgb value="2.500000 2.500000 2.500000" name="irradiance"/>
+		<transform name="to_world">
+			<matrix value="0.970912 -0.176357 0.161953 -438.089081 -0.221377 -0.918893 0.326539 -348.692841 0.091230 -0.352894 -0.931205 825.705200 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+	</emitter>
+
+<!-- Shapes -->
+
+	<shape type="ply" id="mesh-Old_Building_001">
+		<string name="filename" value="meshes/Old_Building_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Connaught_House_001">
+		<string name="filename" value="meshes/Connaught_House_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-20_Kingsway">
+		<string name="filename" value="meshes/20_Kingsway.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Peacock_Theatre">
+		<string name="filename" value="meshes/Peacock_Theatre.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Parish_Hall">
+		<string name="filename" value="meshes/Parish_Hall.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-King_s_Chambers">
+		<string name="filename" value="meshes/King_s_Chambers.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Sheffield_Street">
+		<string name="filename" value="meshes/Sheffield_Street.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-St_Clement_Danes_001">
+		<string name="filename" value="meshes/St_Clement_Danes_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Marconi_House">
+		<string name="filename" value="meshes/Marconi_House.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-25904239_001">
+		<string name="filename" value="meshes/25904239_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-High_Commission_of_India_001">
+		<string name="filename" value="meshes/High_Commission_of_India_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Saint_Mary_le_Strand_001">
+		<string name="filename" value="meshes/Saint_Mary_le_Strand_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Lyceum_Theatre_001">
+		<string name="filename" value="meshes/Lyceum_Theatre_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Civil_Aviation_Authority_House">
+		<string name="filename" value="meshes/Civil_Aviation_Authority_House.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-31509554">
+		<string name="filename" value="meshes/31509554.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-32893066">
+		<string name="filename" value="meshes/32893066.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Royal_Opera_House">
+		<string name="filename" value="meshes/Royal_Opera_House.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-40470552">
+		<string name="filename" value="meshes/40470552.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-London_Transport_Museum">
+		<string name="filename" value="meshes/London_Transport_Museum.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-60368357_001">
+		<string name="filename" value="meshes/60368357_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-60393486">
+		<string name="filename" value="meshes/60393486.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-60393497">
+		<string name="filename" value="meshes/60393497.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-60393508">
+		<string name="filename" value="meshes/60393508.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-60856562">
+		<string name="filename" value="meshes/60856562.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Ping_Pong">
+		<string name="filename" value="meshes/Ping_Pong.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Royal_Society_of_Arts">
+		<string name="filename" value="meshes/The_Royal_Society_of_Arts.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-68808016">
+		<string name="filename" value="meshes/68808016.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Stamp_Centre">
+		<string name="filename" value="meshes/Stamp_Centre.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-72140256">
+		<string name="filename" value="meshes/72140256.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-72140259">
+		<string name="filename" value="meshes/72140259.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Break_Point">
+		<string name="filename" value="meshes/Break_Point.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-72140263">
+		<string name="filename" value="meshes/72140263.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-O2">
+		<string name="filename" value="meshes/O2.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-EE">
+		<string name="filename" value="meshes/EE.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Caff__Nero">
+		<string name="filename" value="meshes/Caff__Nero.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-72140281">
+		<string name="filename" value="meshes/72140281.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Paul">
+		<string name="filename" value="meshes/Paul.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-72140284">
+		<string name="filename" value="meshes/72140284.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Hotel_Chocolat">
+		<string name="filename" value="meshes/Hotel_Chocolat.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Interbrand">
+		<string name="filename" value="meshes/Interbrand.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Hebe_Hair_Salons">
+		<string name="filename" value="meshes/Hebe_Hair_Salons.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Bella_Italia">
+		<string name="filename" value="meshes/Bella_Italia.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-72140291">
+		<string name="filename" value="meshes/72140291.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-itsu">
+		<string name="filename" value="meshes/itsu.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Argos">
+		<string name="filename" value="meshes/Argos.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-LEON">
+		<string name="filename" value="meshes/LEON.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Zizzi">
+		<string name="filename" value="meshes/Zizzi.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80058703">
+		<string name="filename" value="meshes/80058703.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80058704">
+		<string name="filename" value="meshes/80058704.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80058706">
+		<string name="filename" value="meshes/80058706.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Fielding_Hotel">
+		<string name="filename" value="meshes/Fielding_Hotel.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80058710">
+		<string name="filename" value="meshes/80058710.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80058712">
+		<string name="filename" value="meshes/80058712.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80119137">
+		<string name="filename" value="meshes/80119137.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80120139">
+		<string name="filename" value="meshes/80120139.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80120140">
+		<string name="filename" value="meshes/80120140.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80120141">
+		<string name="filename" value="meshes/80120141.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80120142">
+		<string name="filename" value="meshes/80120142.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Covent_Garden_Telephone_Exchange">
+		<string name="filename" value="meshes/Covent_Garden_Telephone_Exchange.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80207929">
+		<string name="filename" value="meshes/80207929.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Fortune_Theatre">
+		<string name="filename" value="meshes/Fortune_Theatre.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80208384">
+		<string name="filename" value="meshes/80208384.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Sun_Tavern">
+		<string name="filename" value="meshes/The_Sun_Tavern.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80208386">
+		<string name="filename" value="meshes/80208386.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80208387">
+		<string name="filename" value="meshes/80208387.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80208388">
+		<string name="filename" value="meshes/80208388.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-80208389">
+		<string name="filename" value="meshes/80208389.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-81071469">
+		<string name="filename" value="meshes/81071469.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-81071472">
+		<string name="filename" value="meshes/81071472.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-81071475">
+		<string name="filename" value="meshes/81071475.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Fish_Works">
+		<string name="filename" value="meshes/Fish_Works.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Theatre_Royal__Drury_Lane">
+		<string name="filename" value="meshes/Theatre_Royal__Drury_Lane.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Royal_Ballet_School">
+		<string name="filename" value="meshes/The_Royal_Ballet_School.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Jubilee_Market_Hall">
+		<string name="filename" value="meshes/Jubilee_Market_Hall.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Savoy_Hotel">
+		<string name="filename" value="meshes/Savoy_Hotel.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Institution_of_Engineering_and_Technology">
+		<string name="filename" value="meshes/Institution_of_Engineering_and_Technology.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-British_American_Tobacco_001">
+		<string name="filename" value="meshes/British_American_Tobacco_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Queen_Elizabeth_Building">
+		<string name="filename" value="meshes/Queen_Elizabeth_Building.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-98485737">
+		<string name="filename" value="meshes/98485737.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-98485739">
+		<string name="filename" value="meshes/98485739.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Two_Temple_Place">
+		<string name="filename" value="meshes/Two_Temple_Place.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-International_Institute_for_Strategic_Studies_001">
+		<string name="filename" value="meshes/International_Institute_for_Strategic_Studies_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-98485772">
+		<string name="filename" value="meshes/98485772.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Barbershop">
+		<string name="filename" value="meshes/Barbershop.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Redemption_Roasters">
+		<string name="filename" value="meshes/Redemption_Roasters.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-98535848">
+		<string name="filename" value="meshes/98535848.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-98535857">
+		<string name="filename" value="meshes/98535857.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Fine_Gift_Company">
+		<string name="filename" value="meshes/The_Fine_Gift_Company.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Elliot_Rhodes">
+		<string name="filename" value="meshes/Elliot_Rhodes.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Wings">
+		<string name="filename" value="meshes/Wings.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Freemasons_Arms">
+		<string name="filename" value="meshes/Freemasons_Arms.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-98535870">
+		<string name="filename" value="meshes/98535870.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Patisserie_Valerie">
+		<string name="filename" value="meshes/Patisserie_Valerie.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-98535875">
+		<string name="filename" value="meshes/98535875.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-St_Dunstan-in-the-West">
+		<string name="filename" value="meshes/St_Dunstan-in-the-West.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275237">
+		<string name="filename" value="meshes/99275237.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275238">
+		<string name="filename" value="meshes/99275238.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275239">
+		<string name="filename" value="meshes/99275239.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275243">
+		<string name="filename" value="meshes/99275243.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275244">
+		<string name="filename" value="meshes/99275244.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275245">
+		<string name="filename" value="meshes/99275245.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275246">
+		<string name="filename" value="meshes/99275246.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275247">
+		<string name="filename" value="meshes/99275247.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275248">
+		<string name="filename" value="meshes/99275248.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275251">
+		<string name="filename" value="meshes/99275251.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275252">
+		<string name="filename" value="meshes/99275252.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Old_Bank_of_England">
+		<string name="filename" value="meshes/The_Old_Bank_of_England.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275256">
+		<string name="filename" value="meshes/99275256.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275258">
+		<string name="filename" value="meshes/99275258.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99275259">
+		<string name="filename" value="meshes/99275259.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Hungarian_Cultural_Centre_London">
+		<string name="filename" value="meshes/Hungarian_Cultural_Centre_London.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952206_001">
+		<string name="filename" value="meshes/99952206_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952212_001">
+		<string name="filename" value="meshes/99952212_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952213_001">
+		<string name="filename" value="meshes/99952213_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Polpo">
+		<string name="filename" value="meshes/Polpo.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-One_Aldwych_001">
+		<string name="filename" value="meshes/One_Aldwych_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952225">
+		<string name="filename" value="meshes/99952225.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952230_001">
+		<string name="filename" value="meshes/99952230_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952232">
+		<string name="filename" value="meshes/99952232.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952241">
+		<string name="filename" value="meshes/99952241.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952246_001">
+		<string name="filename" value="meshes/99952246_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Condesa">
+		<string name="filename" value="meshes/Condesa.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952253">
+		<string name="filename" value="meshes/99952253.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952255">
+		<string name="filename" value="meshes/99952255.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952259">
+		<string name="filename" value="meshes/99952259.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Gourmet_Burger_Kitchen">
+		<string name="filename" value="meshes/Gourmet_Burger_Kitchen.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952264">
+		<string name="filename" value="meshes/99952264.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952266">
+		<string name="filename" value="meshes/99952266.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952271_001">
+		<string name="filename" value="meshes/99952271_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Big_Easy">
+		<string name="filename" value="meshes/Big_Easy.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952275">
+		<string name="filename" value="meshes/99952275.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952277">
+		<string name="filename" value="meshes/99952277.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952278">
+		<string name="filename" value="meshes/99952278.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952283">
+		<string name="filename" value="meshes/99952283.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952291">
+		<string name="filename" value="meshes/99952291.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952292_001">
+		<string name="filename" value="meshes/99952292_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952294">
+		<string name="filename" value="meshes/99952294.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952297">
+		<string name="filename" value="meshes/99952297.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Bella_Italia_001">
+		<string name="filename" value="meshes/Bella_Italia_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952301">
+		<string name="filename" value="meshes/99952301.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952306">
+		<string name="filename" value="meshes/99952306.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Strand_Tandoori">
+		<string name="filename" value="meshes/Strand_Tandoori.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Porterhouse">
+		<string name="filename" value="meshes/The_Porterhouse.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Corpus_Christi_Catholic_Church">
+		<string name="filename" value="meshes/Corpus_Christi_Catholic_Church.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952321_001">
+		<string name="filename" value="meshes/99952321_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952325">
+		<string name="filename" value="meshes/99952325.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Be_At_One_001">
+		<string name="filename" value="meshes/Be_At_One_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Vaudeville_Theatre">
+		<string name="filename" value="meshes/The_Vaudeville_Theatre.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Lyceum_Tavern_001">
+		<string name="filename" value="meshes/Lyceum_Tavern_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952335">
+		<string name="filename" value="meshes/99952335.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952337_001">
+		<string name="filename" value="meshes/99952337_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Tower_House">
+		<string name="filename" value="meshes/Tower_House.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952340">
+		<string name="filename" value="meshes/99952340.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952342">
+		<string name="filename" value="meshes/99952342.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952344">
+		<string name="filename" value="meshes/99952344.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952345">
+		<string name="filename" value="meshes/99952345.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952347">
+		<string name="filename" value="meshes/99952347.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Campagne___Fromage_001">
+		<string name="filename" value="meshes/Campagne___Fromage_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Mail_Boxes_Etc_">
+		<string name="filename" value="meshes/Mail_Boxes_Etc_.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952353">
+		<string name="filename" value="meshes/99952353.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952354">
+		<string name="filename" value="meshes/99952354.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952355">
+		<string name="filename" value="meshes/99952355.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Jubilee_Market_Hall_001">
+		<string name="filename" value="meshes/Jubilee_Market_Hall_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-99952357">
+		<string name="filename" value="meshes/99952357.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-100013418">
+		<string name="filename" value="meshes/100013418.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-100013419">
+		<string name="filename" value="meshes/100013419.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-100013422">
+		<string name="filename" value="meshes/100013422.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-100013425">
+		<string name="filename" value="meshes/100013425.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-100013427">
+		<string name="filename" value="meshes/100013427.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-100013429">
+		<string name="filename" value="meshes/100013429.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Ruffians_Barbers">
+		<string name="filename" value="meshes/Ruffians_Barbers.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-100013431">
+		<string name="filename" value="meshes/100013431.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Maple_Leaf">
+		<string name="filename" value="meshes/The_Maple_Leaf.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Cinnamon_Bazaar">
+		<string name="filename" value="meshes/Cinnamon_Bazaar.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-100013443">
+		<string name="filename" value="meshes/100013443.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-100013446">
+		<string name="filename" value="meshes/100013446.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Lady">
+		<string name="filename" value="meshes/The_Lady.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-100013453">
+		<string name="filename" value="meshes/100013453.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-100013455">
+		<string name="filename" value="meshes/100013455.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Real_Greek">
+		<string name="filename" value="meshes/The_Real_Greek.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-115809005_001">
+		<string name="filename" value="meshes/115809005_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-115809008_001">
+		<string name="filename" value="meshes/115809008_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Norfolk_Building_001">
+		<string name="filename" value="meshes/Norfolk_Building_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-115809011_001">
+		<string name="filename" value="meshes/115809011_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-115809012_001">
+		<string name="filename" value="meshes/115809012_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Philosophy_Building_001">
+		<string name="filename" value="meshes/Philosophy_Building_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Macadam_Building_001">
+		<string name="filename" value="meshes/Macadam_Building_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123308586">
+		<string name="filename" value="meshes/123308586.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123314475">
+		<string name="filename" value="meshes/123314475.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123314478">
+		<string name="filename" value="meshes/123314478.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123314479">
+		<string name="filename" value="meshes/123314479.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123314481_001">
+		<string name="filename" value="meshes/123314481_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123314483_001">
+		<string name="filename" value="meshes/123314483_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123314484">
+		<string name="filename" value="meshes/123314484.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123314487">
+		<string name="filename" value="meshes/123314487.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123315491">
+		<string name="filename" value="meshes/123315491.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123315492">
+		<string name="filename" value="meshes/123315492.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123315493">
+		<string name="filename" value="meshes/123315493.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Nags_Head">
+		<string name="filename" value="meshes/The_Nags_Head.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123318574">
+		<string name="filename" value="meshes/123318574.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123318575">
+		<string name="filename" value="meshes/123318575.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Busaba">
+		<string name="filename" value="meshes/Busaba.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123318580">
+		<string name="filename" value="meshes/123318580.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123318583">
+		<string name="filename" value="meshes/123318583.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-123318584">
+		<string name="filename" value="meshes/123318584.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Temple_Church">
+		<string name="filename" value="meshes/Temple_Church.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-128460984">
+		<string name="filename" value="meshes/128460984.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-128460985">
+		<string name="filename" value="meshes/128460985.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Carpmael_Building">
+		<string name="filename" value="meshes/Carpmael_Building.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-139515782_001">
+		<string name="filename" value="meshes/139515782_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-139810251">
+		<string name="filename" value="meshes/139810251.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-North_Wing_001">
+		<string name="filename" value="meshes/North_Wing_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Aldwych_001">
+		<string name="filename" value="meshes/Aldwych_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-140519663">
+		<string name="filename" value="meshes/140519663.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Coutts">
+		<string name="filename" value="meshes/Coutts.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-142300247">
+		<string name="filename" value="meshes/142300247.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-142300248">
+		<string name="filename" value="meshes/142300248.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Aram">
+		<string name="filename" value="meshes/Aram.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Pub_Licasity">
+		<string name="filename" value="meshes/Pub_Licasity.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Aldwych_Theatre_001">
+		<string name="filename" value="meshes/Aldwych_Theatre_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Kameleon">
+		<string name="filename" value="meshes/Kameleon.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-148522891">
+		<string name="filename" value="meshes/148522891.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-148523746_001">
+		<string name="filename" value="meshes/148523746_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Thai_Square_001">
+		<string name="filename" value="meshes/Thai_Square_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-148523754_001">
+		<string name="filename" value="meshes/148523754_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-148523755_001">
+		<string name="filename" value="meshes/148523755_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Ehthele_001">
+		<string name="filename" value="meshes/Ehthele_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-153701560">
+		<string name="filename" value="meshes/153701560.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Bar___Co">
+		<string name="filename" value="meshes/Bar___Co.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Bagelmania">
+		<string name="filename" value="meshes/Bagelmania.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Soho_Coffee_Co">
+		<string name="filename" value="meshes/Soho_Coffee_Co.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-BK_News">
+		<string name="filename" value="meshes/BK_News.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Barclays">
+		<string name="filename" value="meshes/Barclays.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Brunel_the_Sandwich_Shop">
+		<string name="filename" value="meshes/Brunel_the_Sandwich_Shop.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-C__Hoare_and_Company">
+		<string name="filename" value="meshes/C__Hoare_and_Company.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Wrap_It_Up_">
+		<string name="filename" value="meshes/Wrap_It_Up_.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Leonard_Jay">
+		<string name="filename" value="meshes/Leonard_Jay.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-David_Price_Solicitors">
+		<string name="filename" value="meshes/David_Price_Solicitors.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420176">
+		<string name="filename" value="meshes/161420176.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420177">
+		<string name="filename" value="meshes/161420177.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Quadrant_Chambers">
+		<string name="filename" value="meshes/Quadrant_Chambers.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420179">
+		<string name="filename" value="meshes/161420179.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420180">
+		<string name="filename" value="meshes/161420180.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420181">
+		<string name="filename" value="meshes/161420181.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420182">
+		<string name="filename" value="meshes/161420182.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Whitby___Co">
+		<string name="filename" value="meshes/Whitby___Co.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Fleet_Street_Press">
+		<string name="filename" value="meshes/The_Fleet_Street_Press.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Kall_Kwik">
+		<string name="filename" value="meshes/Kall_Kwik.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Prince_Henry_s_Room">
+		<string name="filename" value="meshes/Prince_Henry_s_Room.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-RBS">
+		<string name="filename" value="meshes/RBS.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Thai_Square_002">
+		<string name="filename" value="meshes/Thai_Square_002.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_George">
+		<string name="filename" value="meshes/The_George.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Ye_Olde_Cock_Tavern">
+		<string name="filename" value="meshes/Ye_Olde_Cock_Tavern.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Twinings">
+		<string name="filename" value="meshes/Twinings.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Wildy___Sons">
+		<string name="filename" value="meshes/Wildy___Sons.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Wrap_It_Up__001">
+		<string name="filename" value="meshes/Wrap_It_Up__001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420195">
+		<string name="filename" value="meshes/161420195.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420196">
+		<string name="filename" value="meshes/161420196.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420199">
+		<string name="filename" value="meshes/161420199.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420200">
+		<string name="filename" value="meshes/161420200.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420201">
+		<string name="filename" value="meshes/161420201.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420205">
+		<string name="filename" value="meshes/161420205.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420206">
+		<string name="filename" value="meshes/161420206.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420208">
+		<string name="filename" value="meshes/161420208.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Z_City_Hotel">
+		<string name="filename" value="meshes/Z_City_Hotel.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Gino_D_Acampo">
+		<string name="filename" value="meshes/Gino_D_Acampo.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Middle_Temple_Gatehouse">
+		<string name="filename" value="meshes/Middle_Temple_Gatehouse.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420225">
+		<string name="filename" value="meshes/161420225.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161420228">
+		<string name="filename" value="meshes/161420228.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Gibraltar_House_001">
+		<string name="filename" value="meshes/Gibraltar_House_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-J_S_Franklin_Ltd_001">
+		<string name="filename" value="meshes/J_S_Franklin_Ltd_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Shapur_001">
+		<string name="filename" value="meshes/Shapur_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161487162">
+		<string name="filename" value="meshes/161487162.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161487163">
+		<string name="filename" value="meshes/161487163.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-161487164">
+		<string name="filename" value="meshes/161487164.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-St_Paul_s_Church">
+		<string name="filename" value="meshes/St_Paul_s_Church.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-173544259">
+		<string name="filename" value="meshes/173544259.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_White_Lion">
+		<string name="filename" value="meshes/The_White_Lion.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-173544280">
+		<string name="filename" value="meshes/173544280.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-173544303">
+		<string name="filename" value="meshes/173544303.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-173544318">
+		<string name="filename" value="meshes/173544318.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-173544657">
+		<string name="filename" value="meshes/173544657.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-173544659">
+		<string name="filename" value="meshes/173544659.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-173544660">
+		<string name="filename" value="meshes/173544660.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-173544661">
+		<string name="filename" value="meshes/173544661.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-173544662">
+		<string name="filename" value="meshes/173544662.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-173544663">
+		<string name="filename" value="meshes/173544663.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-173544664">
+		<string name="filename" value="meshes/173544664.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-British_Library_of_Political_and_Economic_Science">
+		<string name="filename" value="meshes/British_Library_of_Political_and_Economic_Science.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Cowdray_House">
+		<string name="filename" value="meshes/Cowdray_House.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Queen_s_Building">
+		<string name="filename" value="meshes/Queen_s_Building.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-St_Clement_s_Building">
+		<string name="filename" value="meshes/St_Clement_s_Building.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Lakatos_Building">
+		<string name="filename" value="meshes/Lakatos_Building.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Thomas_More_Building">
+		<string name="filename" value="meshes/Thomas_More_Building.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-174793688">
+		<string name="filename" value="meshes/174793688.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-175155025">
+		<string name="filename" value="meshes/175155025.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Apple_Store">
+		<string name="filename" value="meshes/Apple_Store.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-181939023_001">
+		<string name="filename" value="meshes/181939023_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-181939031_001">
+		<string name="filename" value="meshes/181939031_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Virginia_Woolf_Building">
+		<string name="filename" value="meshes/Virginia_Woolf_Building.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-183360797">
+		<string name="filename" value="meshes/183360797.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Ted_Baker">
+		<string name="filename" value="meshes/Ted_Baker.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Michael_Kors">
+		<string name="filename" value="meshes/Michael_Kors.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Swatch">
+		<string name="filename" value="meshes/Swatch.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-183360806">
+		<string name="filename" value="meshes/183360806.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-183360807">
+		<string name="filename" value="meshes/183360807.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Body_Shop">
+		<string name="filename" value="meshes/The_Body_Shop.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Rituals">
+		<string name="filename" value="meshes/Rituals.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-MAC_Cosmetics">
+		<string name="filename" value="meshes/MAC_Cosmetics.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-183360826">
+		<string name="filename" value="meshes/183360826.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Brettenham_House_001">
+		<string name="filename" value="meshes/Brettenham_House_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Tower_Lifeboat_Station">
+		<string name="filename" value="meshes/Tower_Lifeboat_Station.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Lady_of_the_Grapes">
+		<string name="filename" value="meshes/Lady_of_the_Grapes.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Boulevard_Brasserie">
+		<string name="filename" value="meshes/Boulevard_Brasserie.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Banana_Tree">
+		<string name="filename" value="meshes/Banana_Tree.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Coach___Horses">
+		<string name="filename" value="meshes/Coach___Horses.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-C_te_Brasserie">
+		<string name="filename" value="meshes/C_te_Brasserie.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Notes">
+		<string name="filename" value="meshes/Notes.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-196657748">
+		<string name="filename" value="meshes/196657748.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Siam_Eatery_001">
+		<string name="filename" value="meshes/Siam_Eatery_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Volta_do_Mar">
+		<string name="filename" value="meshes/Volta_do_Mar.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-196657751_001">
+		<string name="filename" value="meshes/196657751_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Christopher_s_001">
+		<string name="filename" value="meshes/Christopher_s_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-196657754_001">
+		<string name="filename" value="meshes/196657754_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-196657755">
+		<string name="filename" value="meshes/196657755.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-196657756_001">
+		<string name="filename" value="meshes/196657756_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-196657757_001">
+		<string name="filename" value="meshes/196657757_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-196657758_001">
+		<string name="filename" value="meshes/196657758_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Four_To_Eight_Restaurant_001">
+		<string name="filename" value="meshes/Four_To_Eight_Restaurant_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Band__001">
+		<string name="filename" value="meshes/Band__001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Queen_s_Chapel_of_the_Savoy">
+		<string name="filename" value="meshes/Queen_s_Chapel_of_the_Savoy.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-HQS_Wellington">
+		<string name="filename" value="meshes/HQS_Wellington.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Duchess_Theatre_001">
+		<string name="filename" value="meshes/Duchess_Theatre_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-220275753">
+		<string name="filename" value="meshes/220275753.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-226054068">
+		<string name="filename" value="meshes/226054068.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-226054069">
+		<string name="filename" value="meshes/226054069.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-226054070">
+		<string name="filename" value="meshes/226054070.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Daly_s_Wine_Bar">
+		<string name="filename" value="meshes/Daly_s_Wine_Bar.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-244884782">
+		<string name="filename" value="meshes/244884782.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Sykes___Son_Limited">
+		<string name="filename" value="meshes/Sykes___Son_Limited.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Devereux">
+		<string name="filename" value="meshes/The_Devereux.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Edgar_Wallace">
+		<string name="filename" value="meshes/The_Edgar_Wallace.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Your_Dental_Practice">
+		<string name="filename" value="meshes/Your_Dental_Practice.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-244884788">
+		<string name="filename" value="meshes/244884788.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-244884789">
+		<string name="filename" value="meshes/244884789.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-244884790">
+		<string name="filename" value="meshes/244884790.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-244884791">
+		<string name="filename" value="meshes/244884791.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Wellington_001">
+		<string name="filename" value="meshes/The_Wellington_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Balthazar_London">
+		<string name="filename" value="meshes/Balthazar_London.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Balthazar_Boulangerie">
+		<string name="filename" value="meshes/Balthazar_Boulangerie.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-257262444">
+		<string name="filename" value="meshes/257262444.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Starbucks">
+		<string name="filename" value="meshes/Starbucks.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-257262448">
+		<string name="filename" value="meshes/257262448.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-257262449">
+		<string name="filename" value="meshes/257262449.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-257262450">
+		<string name="filename" value="meshes/257262450.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-257262451">
+		<string name="filename" value="meshes/257262451.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Gelatorino">
+		<string name="filename" value="meshes/Gelatorino.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-SugarSin">
+		<string name="filename" value="meshes/SugarSin.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-257269028">
+		<string name="filename" value="meshes/257269028.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-257269032">
+		<string name="filename" value="meshes/257269032.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Peyton_and_Byrne">
+		<string name="filename" value="meshes/Peyton_and_Byrne.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-274444144_001">
+		<string name="filename" value="meshes/274444144_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Me_London_001">
+		<string name="filename" value="meshes/Me_London_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Saw_Swee_Hock_Student_Centre">
+		<string name="filename" value="meshes/Saw_Swee_Hock_Student_Centre.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Columbia_House_001">
+		<string name="filename" value="meshes/Columbia_House_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Clement_House_001">
+		<string name="filename" value="meshes/Clement_House_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Covington___Burling_001">
+		<string name="filename" value="meshes/Covington___Burling_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Pankhurst_House_001">
+		<string name="filename" value="meshes/Pankhurst_House_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Fawcett_House_001">
+		<string name="filename" value="meshes/Fawcett_House_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Pethick-Lawrence_House_001">
+		<string name="filename" value="meshes/Pethick-Lawrence_House_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Ye_Olde_White_Horse">
+		<string name="filename" value="meshes/Ye_Olde_White_Horse.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-310159571">
+		<string name="filename" value="meshes/310159571.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Plaza_Caf_">
+		<string name="filename" value="meshes/Plaza_Caf_.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Adelphi_Theatre">
+		<string name="filename" value="meshes/Adelphi_Theatre.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Novello_001">
+		<string name="filename" value="meshes/Novello_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-95_Aldwych_001">
+		<string name="filename" value="meshes/95_Aldwych_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Harcourt_Buildings">
+		<string name="filename" value="meshes/Harcourt_Buildings.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Middle_Temple_Hall">
+		<string name="filename" value="meshes/Middle_Temple_Hall.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Plowden_Buildings">
+		<string name="filename" value="meshes/Plowden_Buildings.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Temple_Gardens">
+		<string name="filename" value="meshes/Temple_Gardens.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-372838184">
+		<string name="filename" value="meshes/372838184.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Somerset_House_001">
+		<string name="filename" value="meshes/Somerset_House_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Courtauld_Institute_of_Art_001">
+		<string name="filename" value="meshes/Courtauld_Institute_of_Art_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-PizzaExpress">
+		<string name="filename" value="meshes/PizzaExpress.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Hotel_Strand_Continental_001">
+		<string name="filename" value="meshes/Hotel_Strand_Continental_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Bush_House__South_East_Wing__001">
+		<string name="filename" value="meshes/Bush_House__South_East_Wing__001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Bush_House__North_East_Wing__001">
+		<string name="filename" value="meshes/Bush_House__North_East_Wing__001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-386209468_001">
+		<string name="filename" value="meshes/386209468_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-390047501_001">
+		<string name="filename" value="meshes/390047501_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-390047503_001">
+		<string name="filename" value="meshes/390047503_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-390047505_001">
+		<string name="filename" value="meshes/390047505_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-390047507_001">
+		<string name="filename" value="meshes/390047507_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-390047510_001">
+		<string name="filename" value="meshes/390047510_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-390047512_001">
+		<string name="filename" value="meshes/390047512_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Temple_Brew_House">
+		<string name="filename" value="meshes/Temple_Brew_House.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-442026080_001">
+		<string name="filename" value="meshes/442026080_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-HM_Revenue___Customs_001">
+		<string name="filename" value="meshes/HM_Revenue___Customs_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Bush_House__North_West_Wing__001">
+		<string name="filename" value="meshes/Bush_House__North_West_Wing__001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Cabmen_s_Shelter">
+		<string name="filename" value="meshes/Cabmen_s_Shelter.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Waldorf_Hilton__London_001">
+		<string name="filename" value="meshes/The_Waldorf_Hilton__London_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-485346071">
+		<string name="filename" value="meshes/485346071.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-485346074">
+		<string name="filename" value="meshes/485346074.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-485346082">
+		<string name="filename" value="meshes/485346082.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Nell_Gwynne_Tavern">
+		<string name="filename" value="meshes/Nell_Gwynne_Tavern.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-487479841">
+		<string name="filename" value="meshes/487479841.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Savoy_Theatre">
+		<string name="filename" value="meshes/Savoy_Theatre.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-492981833">
+		<string name="filename" value="meshes/492981833.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-511856176">
+		<string name="filename" value="meshes/511856176.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-533831574_001">
+		<string name="filename" value="meshes/533831574_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-533831575_001">
+		<string name="filename" value="meshes/533831575_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558503732">
+		<string name="filename" value="meshes/558503732.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Bedford_House">
+		<string name="filename" value="meshes/Bedford_House.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558576330">
+		<string name="filename" value="meshes/558576330.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558576331">
+		<string name="filename" value="meshes/558576331.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Chequers_Sandwich_Bar">
+		<string name="filename" value="meshes/Chequers_Sandwich_Bar.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Carbon">
+		<string name="filename" value="meshes/Carbon.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558576334">
+		<string name="filename" value="meshes/558576334.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Soho_Coffee_co2">
+		<string name="filename" value="meshes/Soho_Coffee_co2.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Honest_Burgers">
+		<string name="filename" value="meshes/Honest_Burgers.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558928366">
+		<string name="filename" value="meshes/558928366.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558928367">
+		<string name="filename" value="meshes/558928367.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558928368">
+		<string name="filename" value="meshes/558928368.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558928369">
+		<string name="filename" value="meshes/558928369.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558928370">
+		<string name="filename" value="meshes/558928370.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558928371">
+		<string name="filename" value="meshes/558928371.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Sticks_n_Sushi">
+		<string name="filename" value="meshes/Sticks_n_Sushi.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558928374">
+		<string name="filename" value="meshes/558928374.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558928375">
+		<string name="filename" value="meshes/558928375.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558928376">
+		<string name="filename" value="meshes/558928376.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-558928377">
+		<string name="filename" value="meshes/558928377.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Nordic_Outdoor">
+		<string name="filename" value="meshes/Nordic_Outdoor.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-559946401">
+		<string name="filename" value="meshes/559946401.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-560380594">
+		<string name="filename" value="meshes/560380594.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Chamberlain_de_Broe">
+		<string name="filename" value="meshes/Chamberlain_de_Broe.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Covent_Garden_Market">
+		<string name="filename" value="meshes/Covent_Garden_Market.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Chesham_Building_001">
+		<string name="filename" value="meshes/Chesham_Building_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_Old_Watch_House_001">
+		<string name="filename" value="meshes/The_Old_Watch_House_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Double_Shot_Coffee_Co__001">
+		<string name="filename" value="meshes/Double_Shot_Coffee_Co__001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-670350853">
+		<string name="filename" value="meshes/670350853.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-670350854">
+		<string name="filename" value="meshes/670350854.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-670350868">
+		<string name="filename" value="meshes/670350868.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-NatWest">
+		<string name="filename" value="meshes/NatWest.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-670350872">
+		<string name="filename" value="meshes/670350872.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Jidori_001">
+		<string name="filename" value="meshes/Jidori_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-670920485_001">
+		<string name="filename" value="meshes/670920485_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-670986515">
+		<string name="filename" value="meshes/670986515.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-670986547_001">
+		<string name="filename" value="meshes/670986547_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Co-op_Food">
+		<string name="filename" value="meshes/Co-op_Food.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Temple_Station">
+		<string name="filename" value="meshes/Temple_Station.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Temple_Bar">
+		<string name="filename" value="meshes/Temple_Bar.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-733241086">
+		<string name="filename" value="meshes/733241086.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centre_Building_001">
+		<string name="filename" value="meshes/Centre_Building_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-986906889">
+		<string name="filename" value="meshes/986906889.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-986906890">
+		<string name="filename" value="meshes/986906890.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Bow_Street_Tavern">
+		<string name="filename" value="meshes/Bow_Street_Tavern.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-986906892">
+		<string name="filename" value="meshes/986906892.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-986906895">
+		<string name="filename" value="meshes/986906895.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-986906896">
+		<string name="filename" value="meshes/986906896.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Opera_Tavern">
+		<string name="filename" value="meshes/Opera_Tavern.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Mamie_s">
+		<string name="filename" value="meshes/Mamie_s.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-986920648">
+		<string name="filename" value="meshes/986920648.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-986920649">
+		<string name="filename" value="meshes/986920649.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-986920650">
+		<string name="filename" value="meshes/986920650.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Nell_of_Old_Drury">
+		<string name="filename" value="meshes/Nell_of_Old_Drury.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Sagar">
+		<string name="filename" value="meshes/Sagar.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Augustus_Harris">
+		<string name="filename" value="meshes/Augustus_Harris.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-986952081">
+		<string name="filename" value="meshes/986952081.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-986977630">
+		<string name="filename" value="meshes/986977630.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-986977635">
+		<string name="filename" value="meshes/986977635.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Pho">
+		<string name="filename" value="meshes/Pho.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-1043677759">
+		<string name="filename" value="meshes/1043677759.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-1078305949">
+		<string name="filename" value="meshes/1078305949.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-1134827967_001">
+		<string name="filename" value="meshes/1134827967_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-1184099798">
+		<string name="filename" value="meshes/1184099798.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-1184099799">
+		<string name="filename" value="meshes/1184099799.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Custom_Austrian-High-Commission_001">
+		<string name="filename" value="meshes/Custom_Austrian-High-Commission_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Custom_Aldwych-House_001">
+		<string name="filename" value="meshes/Custom_Aldwych-House_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-building_mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-the_strand_map">
+		<string name="filename" value="meshes/the_strand_map.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-the_strand_map_texture" name="bsdf"/>
+	</shape>
+</scene>
