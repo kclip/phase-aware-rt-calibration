@@ -1,0 +1,108 @@
+#title: Toy-Example scenario
+#output_dir: logs/
+#python:
+import numpy as np
+from gprMax.input_cmd_funcs import *
+
+# Options
+long_time_window = False
+save_view = False
+n_snapshots = 50
+time_snapshots = 10e-9
+
+# Parameters
+dielectric_smoothing = "y"
+d_tx_lambda = 30  # 30 wavelengths
+d_rx_lambda_list = [20, 30, 40]
+d_upper_wall_lambda = 40  # 40 wavelengths
+d_lower_wall_lambda = 50  # 50 wavelengths
+x_length_blocker_lambda = 1  # 1 wavelength
+y_length_blocker_lambda = 30  # 30 wavelengths
+
+# Setting
+carrier_frequency = 6e9  # 6GHz
+subcarrier_spacing = 30e3  # 30 kHz
+wavelength = c / carrier_frequency
+
+# X-axis device positions relative to scene center
+d_tx = d_tx_lambda * wavelength
+d_rx_list = [d_rx_lambda * wavelength for d_rx_lambda in d_rx_lambda_list]
+
+# Wall size
+x_offset = 0.20  # 20 cm
+x_length_walls = x_offset + d_tx + max(d_rx_list) + x_offset
+y_length_walls = 0.20  # 20 cm
+
+# Y-axis wall positions relative to scene center
+d_upper_wall = d_upper_wall_lambda * wavelength
+d_lower_wall = d_lower_wall_lambda * wavelength
+
+# Blocker size
+x_length_blocker = x_length_blocker_lambda * wavelength
+y_length_blocker = y_length_blocker_lambda * wavelength
+
+# Devices absolute positions
+y_devices = y_length_walls + d_lower_wall
+x_tx = x_offset
+x_rx_list = [
+    x_offset + d_tx + d_rx
+    for d_rx in d_rx_list
+]
+
+# Blocker absolute position
+x_blocker = x_tx + d_tx - x_length_blocker
+y_blocker = y_devices
+
+# Simulation setting
+spatial_res = wavelength / 20
+dx_dy_dz(spatial_res, spatial_res, spatial_res)
+max_x = x_length_walls
+max_y = y_length_walls + d_lower_wall + d_upper_wall + y_length_walls
+n_blocks_z = 83
+max_z = n_blocks_z * spatial_res
+domain = domain(max_x, max_y, max_z)
+time_of_simulation = (1 / subcarrier_spacing) if long_time_window else 100e-9
+time_window(time_of_simulation)
+
+# Materials
+material(5.31, 0.139, 1.0, 0.0, "concrete")
+material(1.0, 1e7, 1.0, 0.0, "metal")
+
+# Create walls and blocker
+lower_wall = box(0.0, 0.0, 0.0, x_length_walls, y_length_walls, max_z, "concrete", dielectric_smoothing)
+upper_wall = box(0.0, max_y-y_length_walls, 0.0, x_length_walls, max_y, max_z, "concrete", dielectric_smoothing)
+blocker = box(
+    x_blocker - (x_length_blocker / 2),
+    y_blocker - (y_length_blocker / 2),
+    0.0,
+    x_blocker + (x_length_blocker / 2),
+    y_blocker + (y_length_blocker / 2),
+    max_z,
+    "metal",
+    dielectric_smoothing
+)
+
+# Set input impulse and devices
+z_devices = (n_blocks_z // 2) * spatial_res
+waveform("ricker", 1.0, carrier_frequency, "my_ricker")
+hertzian_dipole("z", x_tx, y_devices, z_devices, "my_ricker")
+for x_rx in x_rx_list:
+    rx(x_rx, y_devices, z_devices)
+rx(x_tx, y_devices, z_devices)
+
+# Save view
+if save_view:
+    min_z_view = 10 * spatial_res
+    max_z_view = (n_blocks_z - 10) * spatial_res
+    # geometry_view(
+    #     0, 0, min_z_view,
+    #     max_x, max_y, max_z_view,
+    #     spatial_res, spatial_res, spatial_res,
+    #     "logs/toy_example_maxwell", "n"
+    # )
+    res_view = 2 * spatial_res
+    time_snaps = np.linspace(0, time_snapshots, n_snapshots+1)
+    for idx, t_snap in enumerate(time_snaps[1:]):
+        snapshot(0, 0, min_z_view, max_x, max_y, max_z_view, res_view, res_view, spatial_res, t_snap, f"snapshot{idx}")
+#end_python:
+#pml_cells: 40

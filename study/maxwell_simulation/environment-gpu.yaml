@@ -1,0 +1,18 @@
+name: gprMax
+dependencies:
+- python==3.11.*
+- colorama
+- cython
+- h5py
+- jupyter
+- matplotlib
+- numpy
+- pip
+- psutil
+- scipy
+
+- pip:
+  - tensorflow[and-cuda]==2.15.*
+  - terminaltables
+  - tqdm
+  - pycuda

@@ -1,0 +1,30 @@
+# This env is suited for Linux OS with GPU
+name: phase-aware-rt-calibration
+channels:
+  - conda-forge
+  # - nvidia
+  - defaults
+dependencies:
+  - python=3.8
+  - ipykernel
+  - nbformat
+  - numpy
+  - matplotlib
+  - pillow
+  - click
+  - pandas
+  - fastparquet
+  - seaborn
+  - scipy
+  - plotly
+  - cudatoolkit=11.8.0
+  - pip
+  - pip:
+    - mitsuba==3.4.0
+    - sionna==0.16.1
+    - nvidia-cudnn-cu11==8.6.0.163
+    - tensorflow==2.13.*
+    - tensorflow-probability==0.21.*
+    - bezier
+    - python-dotenv
+    - -e \.
