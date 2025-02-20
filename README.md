@@ -4,12 +4,12 @@ Code repository for paper "[Calibrating Wireless Ray Tracing for Digital Twinnin
 
 If you use this software, please cite it as
 ```bibtex
-@article{ruah2023calibrating,
-  title={Calibrating Wireless Ray Tracing for Digital Twinning using Local Phase Error Estimates},
+@article{ruah2024calibrating,
+  title={Calibrating wireless ray tracing for digital twinning using local phase error estimates},
   author={Ruah, Clement and Simeone, Osvaldo and Hoydis, Jakob and Al-Hashimi, Bashir},
-  journal={arXiv preprint arXiv:2312.12625},
-  year={2023},
-  online={https://arxiv.org/abs/2312.12625}
+  journal={IEEE Transactions on Machine Learning in Communications and Networking},
+  year={2024},
+  publisher={IEEE}
 }
 ```
 
